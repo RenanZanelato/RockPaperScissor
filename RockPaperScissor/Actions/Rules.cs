@@ -25,7 +25,6 @@ namespace RockPaperScissors.Actions
             }
             return true;
         }
-
         private bool ValidatePlayerMove(Player Player)
         {
             if (!this.ValidPlays.Contains(Player.Move))
@@ -59,12 +58,12 @@ namespace RockPaperScissors.Actions
             return Player1;
         }
 
-        private bool ValidateMatch(IList<Player> Players) 
+        private void ValidateMatch(IList<Player> Players) 
         {
             this.ValidatePlayersNumber(Players);
             this.ValidatePlayerMove(Players[0]);
             this.ValidatePlayerMove(Players[1]);
-            return true;
+            return ;
         }
         private bool IsGameTied(Player Player1, Player Player2)
         {

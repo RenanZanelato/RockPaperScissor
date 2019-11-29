@@ -24,6 +24,7 @@ namespace RockPaperScissors
                 Console.WriteLine(Ex.Message);
             }
         }
+
         static IList<Object> SetKeysTournament()
         {
             Player Armando = new Player("Armando", Chooses.Paper);
@@ -75,6 +76,5 @@ namespace RockPaperScissors
 
             Console.WriteLine(string.Format("The Winner for Tournament is {0}", Winner.Name));
         }
-
     }
 }
