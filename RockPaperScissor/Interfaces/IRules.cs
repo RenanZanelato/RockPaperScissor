@@ -5,6 +5,6 @@ namespace RockPaperScissors.Interfaces
 {
     public interface IRules
     {
-         Player CalculatePlayerWinner(IList<Player> Players);
+        Player CalculatePlayerWinner(IList<Player> Players);
     }
 }

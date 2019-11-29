@@ -54,7 +54,7 @@ namespace RockPaperScissors.Test.Actions
                 this.Rules.CalculatePlayerWinner(Players);
             };
 
-            comparison.Should().Throw<NoSuchStrategyError>(string.Format("Invalid Move {0} use only {1}", Dave.Move, string.Join(",", Rules.ValidPlays)));
+            comparison.Should().Throw<NoSuchStrategyError>();
         }
 
         [Test]
