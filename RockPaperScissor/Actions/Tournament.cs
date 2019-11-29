@@ -7,7 +7,7 @@ namespace RockPaperScissors.Actions
 {
     public class Tournament : ITournament
     {
-        private IRules Rules;
+        private readonly IRules Rules;
         private int Round = 0;
 
         public Tournament(IRules Rules)
@@ -23,13 +23,13 @@ namespace RockPaperScissors.Actions
             {
                 tournamentPlayers.Add( (listOrPlayer is Player) ? listOrPlayer : this.RpsTournamentWinner(listOrPlayer)) ;
             }
-
+                
             return this.RpsGameWinner(tournamentPlayers);
         }
 
         public Player RpsGameWinner(IList<Player> Players)
         {
-            this.Round = this.Round + 1;
+            this.Round += 1;
 
             Console.WriteLine(string.Format("Round {0}\r\n", this.Round));
          
